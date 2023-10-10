@@ -1,0 +1,28 @@
+PROCEDURE insertion_Sort(arr)
+VAR
+    set_declarations
+BEGIN
+    FOR i = 1 TO n-1  DO
+        key=arr[i]j=i-1
+        WHILE (j>= 0 AND arr[j] > key) DO
+            swap arr[j+1] with arr[j]
+            j=j-1
+        END_WHILE
+        arr[j+1] = key
+    END_FOR
+END
+
+PROCEDURE insertion_Sort(Tab:Tableau[n])
+VAR
+    i,j,k : INTEGER
+BEGIN
+    FOR i := 1 TO n  DO
+        j := i-1
+        k := Tab[i]
+        WHILE (Tab[j-1] > k) DO
+            Tab[j] := Tab[j-1];
+            j := j-1;
+        END_WHILE
+        Tab[j] := k;
+    END_FOR
+END
